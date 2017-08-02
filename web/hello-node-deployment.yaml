@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-node
+spec:
+  # this replicas value is default
+  # modify it according to your case
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: hello-node
+        role: hello-node
+        tier: hello-node
+    spec:
+      containers:
+      - name: hello-node
+        image: gcr.io/ribw_red/hello-node:1.1
+        ports:
+        - containerPort: 8080

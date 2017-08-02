@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Map</title>
+
+    <!-- dependencies -->
+    <script src="/bin/angular/angular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/bin/angular-socket-io/socket.js"></script>
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="/bin/leaflet/dist/leaflet.css" />
+    <script src="/bin/leaflet/dist/leaflet.js"></script>
+
+    <!-- app -->
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <script src="/js/app.js"></script>
+</head>
+<body ng-controller="MainController">
+
+<div id="mapid"></div>
+
+<p>New locations: {{locations}}</p>
+
+</body>
+</html>

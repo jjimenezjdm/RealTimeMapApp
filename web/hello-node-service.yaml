@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-node
+  labels:
+    app: hello-node
+    role: hello-node
+    tier: hello-node
+spec:
+  sessionAffinity: ClientIP
+  type: LoadBalancer
+  selector:
+    app: hello-node
+    role: hello-node
+    tier: hello-node
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
